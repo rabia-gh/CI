@@ -1,0 +1,28 @@
+//Jenkins file only to tutorial example
+pipeline {
+  agent any
+    
+  tools {nodejs "node"}
+    
+  stages {
+        
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/rabia-gh/jenkinsTest'
+        
+      }
+    }
+        
+    stage('Install dependencies') {
+      steps {
+        bat 'npm install'
+      }
+    }
+     
+    stage('Test app') {
+      steps {
+         bat 'node app.js'
+      }
+    }      
+  }
+}
