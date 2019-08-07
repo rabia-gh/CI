@@ -8,7 +8,7 @@ pipeline {
         
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/rabia-gh/jenkinsTest'
+        git 'https://github.com/rabia-gh/CI'
         
       }
     }
