@@ -12,12 +12,6 @@ pipeline {
         
       }
     }
-        
-    stage('Install dependencies') {
-      steps {
-        bat 'npm install'
-      }
-    }
      
     stage('Test app') {
       steps {
